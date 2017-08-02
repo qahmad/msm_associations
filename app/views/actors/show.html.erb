@@ -17,6 +17,18 @@
       <dt>Image url</dt>
       <dd><%= @actor.image_url %></dd>
 
+      <dt>Movie count</dt>
+      <dd>
+          <%= Character.where(:actor_id => @actor.id).count %>
+      </dd>
+
+      <dt>Filmography</dt>
+      <dd>
+          <% Character.where(:actor_id => @actor.id).find_each do |movie| %>
+            <p><%= Movie.where(:id => movie.movie_id).pluck(:title) %></p>
+          <% end %>
+      </dd>
+
     </dl>
 
     <div class="btn-group btn-group-justified">
