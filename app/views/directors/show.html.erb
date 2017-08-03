@@ -42,6 +42,7 @@
   <% end %>
 </ul>
 
+<div class="page-header"><h3>Add Movie</h3></div>
 
 <div class="row">
   <div class="col-md-12">
@@ -94,15 +95,9 @@
         <input type="text" id="image_url" name="image_url" placeholder="Image url" class="form-control" value="<%= @movie.image_url %>">
       </div>
 
-      <!-- Label and input for director_id -->
-      <!--<div class="form-group">-->
-      <!--  <label for="director_id" class="control-label">-->
-      <!--    Director-->
-      <!--  </label>-->
 
         <input type="hidden" id="director_id" name="director_id" placeholder="Director" class="form-control" value="<%= @director.id %>">
 
-      </div>
 
       <button class="btn btn-success">
         Create Movie
